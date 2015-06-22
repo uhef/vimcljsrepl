@@ -2,6 +2,7 @@
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :min-lein-version "2.5.0"
+  :source-paths ["src/clj"]
   :dependencies [[org.clojure/clojure "1.7.0-RC1"]
                  [compojure "1.3.4"]
                  [ring/ring-defaults "0.1.2"]]
