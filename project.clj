@@ -12,4 +12,8 @@
   :plugins [[lein-ring "0.8.13"]]
   :ring {:handler vimcljsrepl.handler/app}
   :profiles
-  {:dev {:dependencies [[weasel "0.7.0"]]}})
+  {:dev {:repl-options {:init-ns vimcljsrepl.handler
+                        :nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}
+         :dependencies [[weasel "0.7.0"]
+                        [org.clojure/tools.nrepl "0.2.10"]
+                        [com.cemerick/piggieback "0.2.1"]]}})

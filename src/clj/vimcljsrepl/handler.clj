@@ -1,6 +1,8 @@
 (ns vimcljsrepl.handler
   (:require [compojure.core :refer :all]
             [compojure.route :as route]
+            weasel.repl.websocket
+            weasel.repl.server
             [cljs.build.api :refer [build]]
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
             [ring.adapter.jetty :refer [run-jetty]]
@@ -12,6 +14,10 @@
 
 (def app
   (wrap-defaults app-routes site-defaults))
+
+(defn repl-env []
+  (weasel.repl.server/stop)
+  (weasel.repl.websocket/repl-env :ip "0.0.0.0" :port 9001))
 
 (defn run []
   (cljs.build.api/build "src/cljs" {:optimizations :none
