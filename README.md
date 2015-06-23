@@ -1,19 +1,7 @@
 # vimcljsrepl
 
-FIXME
+This is an example project to integrate Clojure and ClojureScript REPL to Vim.
 
-## Prerequisites
+You probably want to read the associated [blog post][cljproto-blog].
 
-You will need [Leiningen][] 2.0.0 or above installed.
-
-[leiningen]: https://github.com/technomancy/leiningen
-
-## Running
-
-To start a web server for the application, run:
-
-    lein ring server
-
-## License
-
-Copyright © 2015 FIXME
+[cljproto-blog]: http://uhef.github.io/cljproto-blog/2015/06/10/clj-cljs-vim-repl.html
