@@ -4,6 +4,7 @@
 /checkouts
 /out
 /resources/public/js
+/logs
 pom.xml
 pom.xml.asc
 *.jar
